@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS Voice Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        #jarvis {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JARVIS Voice Assistant</h1>
+    <div id="jarvis">
+        <p>Welcome! I am JARVIS, your virtual assistant.</p>
+        <input type="text" id="commandInput" placeholder="Type your command...">
+        <button onclick="executeCommand()">Execute</button>
+        <p id="response"></p>
+    </div>
+    <script>
+        function executeCommand() {
+            const command = document.getElementById('commandInput').value;
+            let response = '';
+            switch (command.toLowerCase()) {
+                case 'hello':
+                    response = 'Hello! How can I assist you today?';
+                    break;
+                case 'what is your name?':
+                    response = 'I am JARVIS, your voice assistant.';
+                    break;
+                default:
+                    response = 'I am not sure how to respond to that.';
+            }
+            document.getElementById('response').innerText = response;
+        }
+    </script>
+</body>
+</html>
